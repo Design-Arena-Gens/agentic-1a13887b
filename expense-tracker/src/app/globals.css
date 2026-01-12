@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d1017;
+  --card: #111827;
+  --card-muted: #1f2937;
+  --foreground: #f8fafc;
+  --muted: #94a3b8;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #f5f7fb;
+    --card: #ffffff;
+    --card-muted: #f8fafc;
+    --foreground: #0f172a;
+    --muted: #475569;
+  }
+}
+
+body {
+  @apply min-h-screen bg-[var(--background)] text-[var(--foreground)] antialiased;
+}
+
+.glass {
+  @apply rounded-3xl border border-white/5 bg-white/[0.03] p-6 backdrop-blur-lg;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.card {
+  @apply rounded-2xl border border-white/10 bg-[var(--card)] p-6;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.card-muted {
+  @apply rounded-2xl border border-white/5 bg-[var(--card-muted)] p-6;
+}
+
+.table-gradient {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.9) 0%, rgba(15, 23, 42, 0.6) 100%);
+}
